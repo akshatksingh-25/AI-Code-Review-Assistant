@@ -22,34 +22,53 @@ export const reviewCode = async (req, res) => {
 
     // Keep your prompt exactly as requested
     const prompt = `
-You are an expert software engineer acting as a code reviewer.
+You are an expert software engineer performing a professional code review. Analyze the following ${language} code thoroughly and provide a structured, visually appealing report.  
 
-Analyze the following ${language} code thoroughly and provide a structured, professional review. 
-Your review should be detailed yet clear enough for a developer to immediately understand and improve the code.
-Keep gap between each of the response.
-Please include the following sections in your response:
+Focus on:
+- ✅ Readability
+- 🛠 Modularity
+- ⚠️ Potential bugs
+- 🏆 Best practices
+- 💡 Actionable improvement suggestions
 
-# 1. Code Summary
-Explain what the code does in simple terms (step-by-step).
+Format your response as a **well-designed Markdown report** with headings, subheadings, bullet points, spacing, and optional code snippets. Use emojis, indentation, and spacing to make it easy to read.
 
-# 2. Quality Rating
-Rate the overall code quality as one of: Excellent, Good, Fair, or Poor — and justify your rating.
+Structure your response as follows and adding a horizontal break after each numbered section::
 
-# 3. Readability & Modularity
-Comment on readability (naming, indentation, clarity) and modularity (functions, separation of logic, reusability).
+---
 
-# 4. Best Practices
-Highlight adherence to or violations of best practices in ${language}.
-Include suggestions for modern syntax, patterns, or conventions.
+# 1) Code Summary
+- Explain what the code does step by step, in clear simple terms.
+- Keep it concise and numbered if possible.
 
-### 5. Potential Bugs / Issues
-Identify any syntax or logical errors, inefficiencies, or edge cases that could fail.
+# 2) Quality Rating
+- Rate overall code quality: **Excellent / Good / Fair / Poor**
+- Give a clear justification for the rating.
 
-# 6. Suggestions for Improvement
-List specific, actionable recommendations to enhance code quality, performance, or maintainability. Give in points.
+# 3) Readability & Modularity
+- Discuss naming conventions, indentation, clarity, and comments.
+- Evaluate function structure, separation of concerns, and reusability.
 
-### 7. Example Fix (optional)
-If possible, rewrite a small section of the code using your recommendations.
+# 4) Best Practices
+- Highlight adherence or violations of ${language} best practices.
+- Suggest modern syntax, patterns, or conventions if applicable.
+
+# 5) Potential Bugs / Issues
+- Identify syntax errors, logical errors, inefficiencies, or edge cases.
+- Use bullet points for clarity.
+
+# 6) Suggestions for Improvement
+- Provide actionable recommendations to enhance code quality, readability, or performance.
+- Number or bullet them for clarity.
+
+# 7) Example Fix (Optional)
+- Rewrite a small section of code applying the improvements you suggested.
+- Include it in a code block for clarity.
+
+---
+
+Make sure your output is **professional, visually clear, and easy to follow**, like a formal code review report for a developer team.
+
 
 Code: ${code}
 `;
