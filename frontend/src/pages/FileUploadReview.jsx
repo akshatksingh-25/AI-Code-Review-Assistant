@@ -18,14 +18,47 @@ const FileUploadReview = () => {
     const ext = filename.split(".").pop();
     const map = {
       js: "javascript",
+      jsx: "javascript",
+      ts: "typescript",
+      tsx: "typescript",
       py: "python",
       java: "java",
       cpp: "cpp",
+      c: "c",
       cs: "csharp",
       php: "php",
       rb: "ruby",
       go: "go",
+      swift: "swift",
+      kt: "kotlin",
+      rs: "rust",
+      dart: "dart",
+      scala: "scala",
+      pl: "perl",
+      hs: "haskell",
+      ex: "elixir",
+      r: "r",
+      m: "matlab",
+      sh: "bash",
+      bash: "bash",
+      html: "html",
+      css: "css",
+      scss: "scss",
+      less: "less",
+      json: "json",
+      xml: "xml",
+      yaml: "yaml",
+      yml: "yaml",
+      sql: "sql",
+      txt: "plaintext",
+      md: "markdown",
+      lua: "lua",
       ts: "typescript",
+      coffee: "coffeescript",
+      vb: "vbnet",
+      ps1: "powershell",
+      dart: "dart",
+      bat: "batch",
     };
     return map[ext] || "plaintext";
   };
@@ -59,31 +92,45 @@ const FileUploadReview = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[90vh] text-white">
-      <h2 className="text-3xl font-bold mb-6">Upload File & Get AI Review</h2>
+    <div className="flex flex-col items-center justify-start h-[90vh] text-white px-5 pt-10">
+      
+      {/* Heading */}
+      <h2 className="text-4xl font-bold mb-4 text-purple-400">
+        Upload Files
+      </h2>
+      
+      {/* Description */}
+      <p className="text-gray-400 text-center max-w-[600px] mb-8">
+        Upload your code file and get an AI-powered review instantly. 
+        The assistant will analyze your code and provide feedback on quality, readability, and best practices.
+      </p>
 
+      {/* Upload Button */}
       <input
         type="file"
         accept=".js,.py,.java,.cpp,.ts,.cs,.php,.rb,.go,.txt"
         onChange={handleFileChange}
-        className="mb-4"
+        className="mb-6 p-2 rounded-lg bg-zinc-800 text-white cursor-pointer"
       />
 
+      {/* Review Button */}
       <button
         onClick={handleSubmit}
-        className="btnNormal bg-purple-600 hover:bg-purple-700 px-6 py-2"
+        className="btnNormal bg-purple-600 hover:bg-purple-700 px-8 py-2 mb-8"
       >
         Get Review
       </button>
 
+      {/* Loader */}
       {loading && (
-        <div className="mt-10">
+        <div className="mb-8">
           <DotLoader color="#9333ea" />
         </div>
       )}
 
+      {/* Response */}
       {!loading && response && (
-        <div className="bg-zinc-900 border border-zinc-800 mt-8 p-5 w-[80%] max-h-[60vh] overflow-auto rounded-lg">
+        <div className="bg-zinc-900 border border-zinc-800 p-6 w-[80%] max-h-[60vh] overflow-auto rounded-lg">
           <Markdown>{response}</Markdown>
         </div>
       )}

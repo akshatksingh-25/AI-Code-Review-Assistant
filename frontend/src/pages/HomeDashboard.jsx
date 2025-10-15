@@ -5,7 +5,7 @@ const HomeDashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center h-[90vh] text-center text-white bg-zinc-900 px-5">
+    <div className="flex flex-col items-center justify-start h-[90vh] text-center text-white bg-zinc-900 px-5">
       <h1 className="text-4xl font-bold mb-6 text-purple-400">
         AI Code Review Assistant
       </h1>

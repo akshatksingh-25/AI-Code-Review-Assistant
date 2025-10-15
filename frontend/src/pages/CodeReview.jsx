@@ -102,7 +102,7 @@ const CodeReview = () => {
         className="main flex justify-between gap-4"
         style={{ height: "calc(100vh - 70px" }}
       >
-        <div className="left h-[87.5%] w-[50%] bg-black">
+        <div className="left h-[87.5%] w-[50%] bg-zinc-900">
           <div className="tabs !mt-5 !px-5 !mb-3 w-full flex items-center gap-[10px]">
             <Select
               value={selectedOption}
@@ -123,7 +123,7 @@ const CodeReview = () => {
                 }
                 else reviewCode(); // This now calls backend
               }}
-              className="btnNormal bg-zinc-900 min-w-[120px] transition-all hover:bg-zinc-800"
+              className="btnNormal bg-zinc-900 min-w-[120px] transition-all hover:bg-zinc-800 border"
             >
               Review
             </button>
@@ -141,7 +141,7 @@ const CodeReview = () => {
         </div>
 
         <div className="right overflow-scroll !p-[10px] bg-zinc-900 w-[50%] h-[101%] relative">
-          <div className="topTab border-b-[1px] border-t-[1px] border-[#ffffff] flex items-center justify-center h-[60px] bg-black">
+          <div className="topTab border-b-[1px] border-t-[1px] border-[#ffffff] flex items-center justify-center h-[60px] bg-zinc-900">
             <p className="font-[700] text-[17px]" style={{ color: "white" }}>
               Response
             </p>
