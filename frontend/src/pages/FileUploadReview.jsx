@@ -94,7 +94,7 @@ const FileUploadReview = () => {
   return (
     <div
       className="flex flex-col items-center justify-start h-[90vh] text-white px-5 pt-10"
-      style={{ marginTop: 60 }}
+      style={{ marginTop: 65 }}
     >
       {/* Heading */}
       <h2 className="text-4xl font-bold mb-4 text-purple-400">Upload Files</h2>
