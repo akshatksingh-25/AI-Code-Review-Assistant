@@ -12,6 +12,7 @@
   "dependencies": {
     "@google/genai": "^1.25.0",
     "@monaco-editor/react": "^4.7.0",
+    "@shadcn/ui": "^0.0.4",
     "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.12.2",
     "lucide-react": "^0.545.0",
