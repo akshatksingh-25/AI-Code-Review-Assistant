@@ -3,7 +3,7 @@ import "../App.css";
 import Editor from "@monaco-editor/react";
 import Select from "react-select";
 import Markdown from "react-markdown";
-import DotLoader from "react-spinners/DotLoader";
+import GridLoader from "react-spinners/GridLoader";
 import { fetchReview } from "../api";
 
 
@@ -150,7 +150,7 @@ const CodeReview = () => {
           {/* Loader Overlay */}
           {loading && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-10">
-              <DotLoader color="#9333ea" />
+              <GridLoader color="#9333ea" />
             </div>
           )}
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fetchReview } from "../api";
 import Markdown from "react-markdown";
-import DotLoader from "react-spinners/DotLoader";
+import GridLoader from "react-spinners/GridLoader";
 
 const FileUploadReview = () => {
   const [file, setFile] = useState(null);
@@ -101,7 +101,7 @@ const FileUploadReview = () => {
 
       {/* Description */}
       <p
-        className="text-gray-400 text-center max-w-[600px] mb-8"
+        className="text-xl text-gray-400 text-center max-w-[600px] mb-8"
         style={{ paddingTop: 10, paddingBottom: 20 }}
       >
         Upload your code file and get an AI-powered review instantly. The
@@ -136,7 +136,7 @@ const FileUploadReview = () => {
       {/* Loader */}
       {loading && (
         <div className="mb-8" style={{marginTop:30}}>
-          <DotLoader color="#9333ea" />
+          <GridLoader color="#9333ea" />
         </div>
       )}
 
