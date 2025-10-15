@@ -15,13 +15,13 @@ const History = () => {
   }, []);
 
   return (
-    <div className="p-10 text-white h-[90vh] overflow-auto bg-zinc-900">
-      <h2 className="text-3xl font-bold mb-6">Review History</h2>
+    <div className="p-10 text-white h-[90vh] overflow-auto bg-zinc-900" style={{margin:20}}>
+      <h2 className="text-3xl font-bold mb-6" style={{marginTop:20}}>Review History</h2>
 
-      <table className="w-full border border-zinc-700 text-left">
+      <table className="w-full border border-zinc-700 text-left" style={{marginTop:10}}>
         <thead className="bg-zinc-800">
           <tr>
-            <th className="p-3">#</th>
+            <th className="p-3">S.No.</th>
             <th className="p-3">Language</th>
             <th className="p-3">Date</th>
             <th className="p-3">Action</th>
@@ -38,7 +38,7 @@ const History = () => {
               <td className="p-3">
                 <button
                   onClick={() => setSelectedReview(r)}
-                  className="btnNormal bg-purple-600 hover:bg-purple-700 px-4"
+                  className="btnNormal bg-purple-600 hover:bg-purple-700 px-3 " style={{padding:5,margin:10}}
                 >
                   View
                 </button>
