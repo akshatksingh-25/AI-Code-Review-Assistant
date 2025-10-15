@@ -1,4 +1,3 @@
-import React from "react";
 import { FileCode, Sun } from "lucide-react";
 
 const Navbar = () => {
